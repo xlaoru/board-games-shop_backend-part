@@ -21,7 +21,7 @@ app.post('/', (request, response) => {
             from: 'sokolovilya235@gmail.com',
             to: 'hlaoruweb@gmail.com',
             subject: `Customer ${request.body.fullname} bought ${request.body.goods.join(', ')}`,
-            text: `Customer ${request.body.fullname} bought ${request.body.goods.join(', ')}. Customer's email: ${request.body.email}. Customer's phone number: ${request.body.phonenumber}. Customer's adress: ${request.body.adress}. Customer's payment form ${request.body.paymentform}. Total price: ${request.body.totalprice} ₴`
+            text: `Customer ${request.body.fullname} bought ${request.body.goods.join(', ')}. Customer's email: ${request.body.email}. Customer's phone number: ${request.body.phonenumber}. Customer's adress: ${request.body.adress}. Customer's payment form: ${request.body.paymentform}. Total price: ${request.body.totalprice} ₴`
         }
 
         transporter.sendMail(mailOptions, function(error, info){
